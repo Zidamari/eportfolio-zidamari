@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Mohamed Zidane Marican",
+    title: "Chronark",
     card: "summary_large_image",
   },
   icons: {
