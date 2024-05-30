@@ -13,15 +13,15 @@ const socials = [
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:dev@chronark.com",
+		href: "mohdzidane@outlook.com",
 		label: "Email",
-		handle: "dev@chronark.com",
+		handle: "mohdzidane@outlook.com",
 	},
 	{
 		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
+		href: "https://github.com/Zidamari",
 		label: "Github",
-		handle: "chronark",
+		handle: "Zidamari",
 	},
 ];
 
