@@ -1,12 +1,12 @@
 "use client";
-import { Github, Mail, linkedin } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
 const socials = [
 	{
-		icon: <linkedin size={20} />,
+		icon: <Linkedin size={20} />,
 		href: "www.linkedin.com/in/zidanemarican",
 		label: "LinkedIn",
 		handle: "zidanemarican",
