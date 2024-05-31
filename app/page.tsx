@@ -4,7 +4,9 @@ import Particles from "./components/particles";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },  
+  { name: "Contact", href: "/contact" }, 
+  { name: "About Me", href: "/aboutme" },
+  { name: "Downloads", href: "/downloads" },
 ];
 
 export default function Home() {
