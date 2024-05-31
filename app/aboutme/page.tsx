@@ -1,62 +1,59 @@
-import React from 'react';
+"use client";
+import { Navigation } from "../components/nav";
+import Image from "next/image";
 
-const AboutMe: React.FC = () => {
+const About = () => {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.header}>About Me</h1>
-      <p style={styles.paragraph}>
-        Hello! I'm [Your Name], a passionate developer with a keen interest in web development, automation, and robotics. 
-        With a background in engineering and a love for problem-solving, I enjoy creating innovative solutions that make 
-        a difference. In my free time, I work on personal projects, explore new technologies, and contribute to the 
-        open-source community.
-      </p>
-      <h2 style={styles.subHeader}>Skills</h2>
-      <ul style={styles.list}>
-        <li>Web Development (React, Next.js, TypeScript)</li>
-        <li>Embedded Systems (STM32, ESP-01S, HAL library)</li>
-        <li>Robotics (PID control, sensor integration)</li>
-        <li>Software Development (C, C++, Python)</li>
-      </ul>
-      <h2 style={styles.subHeader}>Projects</h2>
-      <ul style={styles.list}>
-        <li>Automated Robot with Pixy2 Camera</li>
-        <li>HEART: A Fantasy Game</li>
-        <li>Food Printer Functionalities</li>
-        <li>EVEBOT Printer Pen with Speech-to-Text Integration</li>
-      </ul>
-      <h2 style={styles.subHeader}>Contact</h2>
-      <p style={styles.paragraph}>
-        Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a> for any 
-        inquiries or collaborations.
-      </p>
+    <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+      <Navigation />
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-col items-center text-center">
+          <Image
+            src="/images/profile-pic.jpg" 
+            alt="Your Name"
+            width={150}
+            height={150}
+            className="rounded-full mb-4"
+          />
+          <h1 className="text-4xl font-bold text-white mb-2">Your Name</h1>
+          <p className="text-xl text-zinc-400 mb-8">
+            Software Developer | Tech Enthusiast | Lifelong Learner
+          </p>
+        </div>
+
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold text-white mb-6">About Me</h2>
+          <p className="text-lg text-zinc-300 leading-relaxed mb-8">
+            Hi, I'm Your Name, a passionate software developer with a keen
+            interest in web development, AI, and automation. With a background
+            in [Your Background], I have honed my skills in various programming
+            languages and frameworks. My journey in tech started with [Brief
+            Origin Story] and has led me to work on exciting projects such as
+            [Project Highlights].
+          </p>
+
+          <h2 className="text-3xl font-semibold text-white mb-6">Skills</h2>
+          <ul className="text-lg text-zinc-300 leading-relaxed mb-8 list-disc list-inside">
+            <li>JavaScript, TypeScript, React, Next.js</li>
+            <li>Python, Django, Flask</li>
+            <li>Node.js, Express</li>
+            <li>HTML, CSS, Tailwind CSS</li>
+            <li>Git, GitHub, CI/CD</li>
+            <li>SQL, NoSQL Databases</li>
+          </ul>
+
+          <h2 className="text-3xl font-semibold text-white mb-6">Interests</h2>
+          <p className="text-lg text-zinc-300 leading-relaxed">
+            Outside of coding, I enjoy exploring the latest tech trends,
+            participating in hackathons, and contributing to open-source
+            projects. When I'm not in front of a computer screen, you can find
+            me hiking, reading, or experimenting with new recipes in the
+            kitchen.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
 
-const styles = {
-  container: {
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-  },
-  header: {
-    fontSize: '2em',
-    marginBottom: '20px',
-  },
-  subHeader: {
-    fontSize: '1.5em',
-    marginTop: '20px',
-    marginBottom: '10px',
-  },
-  paragraph: {
-    fontSize: '1em',
-    lineHeight: '1.6',
-  },
-  list: {
-    listStyleType: 'disc',
-    paddingLeft: '20px',
-    fontSize: '1em',
-    lineHeight: '1.6',
-  },
-};
-
-export default AboutMe;
+export default About;
