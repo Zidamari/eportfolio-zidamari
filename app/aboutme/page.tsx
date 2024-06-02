@@ -15,7 +15,7 @@ const About = () => {
             height={150}
             className="rounded-full mb-4"
           />
-          <h1 className="text-4xl font-bold text-white mb-2">Your Name</h1>
+          <h1 className="text-4xl font-bold text-white mb-2">Mohamed Zidane Marican</h1>
           <p className="text-xl text-zinc-400 mb-8">
             Robotics Student | Future Engineer | Lifelong Learner
           </p>
@@ -32,7 +32,7 @@ const About = () => {
           <h2 className="text-3xl font-semibold text-white mb-6">Skills</h2>
           <ul className="text-lg text-zinc-300 leading-relaxed mb-8 list-disc list-inside">
             <li>Solidworks, Autodesk Inventor, AutoCAD, Fusion360</li>
-            <li>Python, C, C++</li>
+            <li>Python, C, C++, SPIN</li>
             <li>3D-Printing, Workshop Skills</li>
             <li>ROS, ROS2</li>
             <li>Git, GitHub</li>
