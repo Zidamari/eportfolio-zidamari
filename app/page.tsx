@@ -38,6 +38,7 @@ export default function Home() {
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
           I'm a Robotics Student from the Singapore Institute of Technology and this is my ePortfolio. Feel free to explore! 
+          Template provided by Vercel, made by Chronoark
         </h2>
       </div>
     </div>
