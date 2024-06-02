@@ -34,7 +34,7 @@ const About = () => {
             <li>Solidworks, Autodesk Inventor, AutoCAD, Fusion360</li>
             <li>Python, C, C++</li>
             <li>3D-Printing, Workshop Skills</li>
-            <li>ROS, ROS2li>
+            <li>ROS, ROS2</li>
             <li>Git, GitHub</li>
 
           </ul>
