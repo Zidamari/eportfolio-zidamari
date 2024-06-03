@@ -7,13 +7,13 @@ import { Card } from "../components/card";
 const socials = [
 	{
 		icon: <Linkedin size={20} />,
-		href: "www.linkedin.com/in/zidanemarican",
+		href: "https://www.linkedin.com/in/zidanemarican",
 		label: "LinkedIn",
 		handle: "zidanemarican",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mohdzidane@outlook.com",
+		href: "mailto:mohdzidane@outlook.com",
 		label: "Email",
 		handle: "mohdzidane@outlook.com",
 	},
