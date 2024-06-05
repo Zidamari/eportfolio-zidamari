@@ -9,13 +9,13 @@ const downloads = [
 		icon: <Download size={20} />,
 		label: "Resume",
 		handle: "Download Resume",
-		href: "#",
+		href: "/downloads/Resume.pdf",
 	},
 	{
 		icon: <Download size={20} />,
 		label: "Site Screenshot",
 		handle: "Download Screenshot",
-		href: "#",
+		href: "/downloads/Website Capture Old.pdf",
 	},
 ];
 
