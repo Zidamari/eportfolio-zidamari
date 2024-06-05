@@ -15,7 +15,7 @@ const downloads = [
 		icon: <Download size={20} />,
 		label: "Site Screenshot",
 		handle: "Download Screenshot",
-		href: "/downloads/Website Capture Old.pdf",
+		href: "/downloads/Website Capture.pdf",
 	},
 ];
 
