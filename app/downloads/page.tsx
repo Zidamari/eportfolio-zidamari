@@ -47,7 +47,7 @@ export default function DownloadPage() {
 									</span>
 								</div>
 								<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-									This download is currently under construction. Please check back later.
+									Click the box to be redirected to the download page.
 								</span>
 							</Link>
 						</Card>
