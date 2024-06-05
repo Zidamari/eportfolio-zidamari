@@ -1,4 +1,4 @@
-"use client";
+g"use client";
 import { Navigation } from "../components/nav";
 import Image from "next/image";
 
@@ -42,7 +42,7 @@ const About = () => {
           <h2 className="text-3xl font-semibold text-white mb-6">Interests</h2>
           <p className="text-lg text-zinc-300 leading-relaxed">
             Outside of studies and projects, I tend to draw,sketch and/or sculpt in both 2D and 3D; and traditional or digital mediums.
-            I like to pick up new hobbies which interests me which ranges from physical activities such as bouldering to learning new 
+            I like to pick up new hobbies which interests me which ranges from physical activities such as fencing to learning new 
             languages and softwares that may benefit me.
           </p>
         </div>
