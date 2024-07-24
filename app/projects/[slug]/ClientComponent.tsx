@@ -7,6 +7,12 @@ import { PointLight, AmbientLight } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Mesh } from 'three';
 
+type Props = {
+  slug: string;
+  project: any;
+  views: any;
+};
+
 function SEP2Model() {
   const ref = useRef<Mesh>(null!);
   useFrame(() => {
