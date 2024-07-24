@@ -1,13 +1,14 @@
 {
   "asset": {
     "version": "2.0",
-    "generator": "3dpea GLTFExporter"
+    "generator": "THREE.GLTFExporter r166"
   },
   "scenes": [
     {
-      "name": "AuxScene",
+      "name": "Scene",
       "nodes": [
-        1
+        2,
+        3
       ]
     }
   ],
@@ -20,12 +21,12 @@
         0,
         0,
         0,
-        -9.765077635393027e-12,
+        -9.765077635488384e-12,
         -1.000000000009765,
         0,
         0,
         1.000000000009765,
-        -9.765077635393027e-12,
+        -9.765077635488384e-12,
         0,
         0,
         0,
@@ -33,13 +34,69 @@
         1
       ],
       "name": "mesh_0",
+      "extras": {
+        "name": "mesh_0"
+      },
       "mesh": 0
     },
     {
       "name": "Evebot_214",
+      "extras": {
+        "name": "Evebot_214"
+      },
       "children": [
         0
       ]
+    },
+    {
+      "matrix": [
+        0.05,
+        0,
+        0,
+        0,
+        0,
+        0.05,
+        0,
+        0,
+        0,
+        0,
+        0.05,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "Evebot_214.gltf",
+      "children": [
+        1
+      ]
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        4.404040468236424,
+        11.199181282930263,
+        1.797559243206217,
+        1
+      ],
+      "name": "DirectionalLight",
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 0
+        }
+      }
     }
   ],
   "bufferViews": [
@@ -121,5 +178,24 @@
         }
       ]
     }
+  ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "name": "DirectionalLight",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "intensity": 1,
+          "type": "directional"
+        }
+      ]
+    }
+  },
+  "extensionsUsed": [
+    "KHR_lights_punctual"
   ]
 }
