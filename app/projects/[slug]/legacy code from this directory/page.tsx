@@ -1,4 +1,3 @@
-// app/projects/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
@@ -6,7 +5,6 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
-import SEP2Model from "/app/projects/SEP2Model"; // Correct import path to SEP2Model
 
 export const revalidate = 60;
 
@@ -43,7 +41,6 @@ export default async function PostPage({ params }: Props) {
       <ReportView slug={project.slug} />
 
       <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-        {project.slug === "SEP" && <SEP2Model />}
         <Mdx code={project.body.code} />
       </article>
     </div>
