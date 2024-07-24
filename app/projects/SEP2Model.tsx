@@ -7,9 +7,11 @@ import Threeasy from 'threeasy';
 
 type SEP2ModelProps = {
   className?: string;
+  width?: string;
+  height?: string;
 };
 
-const SEP2Model: React.FC<SEP2ModelProps> = ({ className }) => {
+const SEP2Model: React.FC<SEP2ModelProps> = ({ className, width = '100%', height = '100%' }) => {
   const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -56,7 +58,7 @@ const SEP2Model: React.FC<SEP2ModelProps> = ({ className }) => {
     };
   }, []);
 
-  return <div ref={canvasRef} className={`w-full h-full ${className}`} />;
+  return <div ref={canvasRef} className={`w-full h-full ${className}`} style={{ width, height }} />;
 };
 
 export default SEP2Model;
