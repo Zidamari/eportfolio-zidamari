@@ -1,4 +1,5 @@
 /* global.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,17 +10,10 @@
   }
 }
 
-.sep2-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+#model {
+  transition: transform 0.1s ease-out;
 }
 
-.sep2-content {
-  text-align: center;
-  max-width: 600px;
-  margin-top: 20px;
+#content {
+  transition: transform 0.1s ease-out;
 }
