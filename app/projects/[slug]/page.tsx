@@ -41,7 +41,7 @@ export default async function PostPage({ params }: Props) {
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
 
-      <div className="flex flex-col items-center justify-center px-4 py-12 mx-auto space-y-4 max-w-7xl">
+      <div className="flex flex-col items-center justify-center mx-auto space-y-4 max-w-7xl">
         <div className="w-full p-4">
           <SEP2Model className="w-full h-full" />
         </div>
