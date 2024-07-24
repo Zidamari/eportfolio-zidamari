@@ -30,3 +30,16 @@
 [data-rehype-pretty-code-title] + pre {
     @apply mt-0;
 }
+.model-container {
+  position: relative;
+  float: left; /* or use flexbox or grid to align left */
+  width: 30%; /* adjust the width to your liking */
+  height: 100%; /* adjust the height to your liking */
+  margin: 20px; /* add some margin for breathing room */
+}
+
+.model-container canvas {
+  width: 100%; /* make the canvas take up the full width of the container */
+  height: 100%; /* make the canvas take up the full height of the container */
+  transform: scale(0.5); /* scale down the canvas (and the 3D model) */
+}
