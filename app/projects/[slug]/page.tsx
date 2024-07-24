@@ -1,4 +1,6 @@
 // app/projects/[slug]/page.tsx
+"use client"; // Mark this file as a Client Component
+
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
