@@ -7,4 +7,21 @@
     -webkit-text-stroke: 1px rgba(255,255,255,0.3);
   }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem; /* Adjust the spacing as needed */
+}
+
 }
