@@ -33,16 +33,11 @@ const ClientComponent = ({ slug, project, views }: Props) => {
           className="absolute top-0 left-0 w-[300px] h-[300px] bg-white p-8 rounded-lg shadow-lg"
           style={{ marginLeft: '20px', marginTop: '20px' }}
         >
-          <SEP2Model className="w-full h-full" scale={0.5} />
+          <SEP2Model className="w-full h-full" style={{ transform: `scale(${0.5})` }} />
         </div>
-        <div className="w-2/3 bg-white p-8 rounded-lg shadow-lg ml-8">
-          <article className="prose prose-zinc prose-quoteless">
-            <Mdx code={project.body.code} />
-          </article>
-        </div>
+        ...
       </div>
     </div>
   );
-};
 
 export default ClientComponent;
