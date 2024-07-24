@@ -35,10 +35,10 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative w-screen h-screen overflow-hidden">
       <SEP2ModelWrapper className="model-background" />
-      <div className="container mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div id="content" className="order-1 lg:order-2">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
           <ReportView slug={slug} />
           <article className="prose prose-zinc prose-quoteless">
             <Mdx code={project.body.code} />

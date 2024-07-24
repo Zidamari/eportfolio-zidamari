@@ -56,7 +56,7 @@ const SEP2Model: React.FC<SEP2ModelProps> = ({ className }) => {
     };
   }, []);
 
-  return <div ref={canvasRef} className={className} style={{ width: '100%', height: '500px' }} />;
+  return <div ref={canvasRef} className={`absolute inset-0 ${className}`} style={{ width: '100%', height: '100%' }} />;
 };
 
 export default SEP2Model;
