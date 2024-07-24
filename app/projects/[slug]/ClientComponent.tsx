@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import SEP2ModelWrapper from "@/app/projects/SEP2ModelWrapper";
 import { ReportView } from "./view";
-import { Mdx } from "@/app/components/mdx";
+import { Mdx } from "@/app/components/mdx"; // Import the Mdx component
 
 type Props = {
   slug: string;
@@ -35,15 +35,15 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <div id="model" className="order-2 lg:order-1">
-        <SEP2ModelWrapper />
-      </div>
-      <div id="content" className="order-1 lg:order-2">
-        <ReportView slug={slug} />
-        <article className="prose prose-zinc prose-quoteless">
-          <Mdx code={project.body.code} />
-        </article>
+    <div className="relative">
+      <SEP2ModelWrapper className="model-background" />
+      <div className="container mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div id="content" className="order-1 lg:order-2">
+          <ReportView slug={slug} />
+          <article className="prose prose-zinc prose-quoteless">
+            <Mdx code={project.body.code} />
+          </article>
+        </div>
       </div>
     </div>
   );
