@@ -27,7 +27,7 @@
     "remark-gfm": "3.0.1",
     "typescript": "^5.2.2",
     "three": "^0.152.2",
-    "threeasy": "^1.0.0" 
+    "threeasy": "^0.1.20" 
   },
   "devDependencies": {
     "@opentelemetry/api": "1.6.0",
