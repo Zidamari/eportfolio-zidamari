@@ -5,6 +5,7 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
+import SEP2Model from "@/app/projects/SEP2Model"; // Import the SEP2Model component
 
 export const revalidate = 60;
 
@@ -36,13 +37,19 @@ export default async function PostPage({ params }: Props) {
     (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
 
   return (
-    <div className="bg-zinc-50 min-h-screen">
-      <Header project={project} views={views} />
-      <ReportView slug={project.slug} />
-
-      <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-        <Mdx code={project.body.code} />
-      </article>
+    <div className="bg-zinc-50 min-h-screen flex">
+      <div className="w-1/4 p-4">
+        <div className="sticky top-4">
+          <SEP2Model className="w-full h-full" />
+        </div>
+      </div>
+      <div className="w-3/4 p-4">
+        <Header project={project} views={views} />
+        <ReportView slug={project.slug} />
+        <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
+          <Mdx code={project.body.code} />
+        </article>
+      </div>
     </div>
   );
 }
