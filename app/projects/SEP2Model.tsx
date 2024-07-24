@@ -1,4 +1,6 @@
 // app/projects/SEP2Model.tsx
+"use client"; // Mark this file as a Client Component
+
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -13,7 +15,7 @@ const SEP2Model = () => {
     const app = new Threeasy(THREE, { alpha: true, canvas: canvasRef.current });
 
     const loader = new GLTFLoader();
-    const modelUrl = '/public/models/SEP2Model.gltf';
+    const modelUrl = '/models/SEP2Model.gltf';
 
     loader.load(
       modelUrl,
@@ -51,7 +53,7 @@ const SEP2Model = () => {
     };
   }, []);
 
-  return <div ref={canvasRef} style={{ width: '100%', height: '100%' }} />;
+  return <div ref={canvasRef} style={{ width: '100%', height: '500px' }} />;
 };
 
 export default SEP2Model;
