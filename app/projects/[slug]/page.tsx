@@ -1,6 +1,4 @@
 // app/projects/[slug]/page.tsx
-"use client"; // Mark this file as a Client Component
-
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
@@ -8,7 +6,7 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
-import SEP2Model from "/app/projects/SEP2Model"; // Correct import path to SEP2Model
+import SEP2ModelWrapper from "/app/projects/SEP2ModelWrapper"; // Import the wrapper
 
 export const revalidate = 60;
 
@@ -45,7 +43,7 @@ export default async function PostPage({ params }: Props) {
       <ReportView slug={project.slug} />
 
       <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-        {project.slug === "SEP" && <SEP2Model />}
+        {project.slug === "SEP" && <SEP2ModelWrapper />} {/* Use the wrapper */}
         <Mdx code={project.body.code} />
       </article>
     </div>
