@@ -1,5 +1,4 @@
 [data-rehype-pretty-code-fragment] code {
-    /* @apply grid; */
     min-w-full;
     break-words;
     rounded-none;
