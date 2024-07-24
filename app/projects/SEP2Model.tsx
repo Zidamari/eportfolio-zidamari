@@ -1,64 +1,22 @@
-"use client"; // Mark this file as a Client Component
+import React from "react";
+import { Canvas, useLoader } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "@react-three/drei";
 
-import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import Threeasy from 'threeasy';
-
-type SEP2ModelProps = {
-  className?: string;
-  width?: string;
-  height?: string;
+const Model = () => {
+  const gltf = useLoader(GLTFLoader, "/models/SEP2Model.gltf");
+  return <primitive object={gltf.scene} scale={0.5} />;
 };
 
-const SEP2Model: React.FC<SEP2ModelProps> = ({ className, width = '100%', height = '100%' }) => {
-  const canvasRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!canvasRef.current) return;
-
-    const app = new Threeasy(THREE, { alpha: true, canvas: canvasRef.current });
-
-    const loader = new GLTFLoader();
-    const modelUrl = '/models/SEP2Model.gltf';
-
-    loader.load(
-      modelUrl,
-      (gltf) => {
-        const model = gltf.scene;
-        model.scale.set(0.4, 0.4, 0.4);
-        model.rotation.set(1, 0.4, 0);
-
-        app.scene.add(model);
-
-        const onScroll = () => {
-          const scrollY = window.scrollY;
-          const rotationSpeed = 0.001;
-          model.rotation.x = scrollY * rotationSpeed;
-          model.rotation.y = scrollY * rotationSpeed;
-        };
-
-        window.addEventListener('scroll', onScroll);
-
-        return () => {
-          window.removeEventListener('scroll', onScroll);
-        };
-      },
-      undefined,
-      (error) => {
-        console.error(error);
-      }
-    );
-
-    const light = new THREE.AmbientLight(0xffffff, 3); // soft white light
-    app.scene.add(light);
-
-    return () => {
-      app.dispose();
-    };
-  }, []);
-
-  return <div ref={canvasRef} className={`w-full h-full ${className}`} style={{ width, height }} />;
+const SEP2Model = () => {
+  return (
+    <Canvas className="w-full h-full">
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[10, 10, 5]} intensity={1} />
+      <Model />
+      <OrbitControls />
+    </Canvas>
+  );
 };
 
 export default SEP2Model;
