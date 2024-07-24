@@ -31,7 +31,7 @@ const ClientComponent = ({ slug, project, views }: Props) => {
         <div className="w-1/3 h-96 sticky top-8 bg-white p-8 rounded-lg shadow-lg">
           <SEP2Model className="w-full h-full" />
         </div>
-        <div className="w-2/3 bg-white p-8 rounded-lg shadow-lg ml-8">
+        <div className="w-2/3 bg-white rounded-lg shadow-lg ml-8">
           <article className="prose prose-zinc prose-quoteless">
             <Mdx code={project.body.code} />
           </article>
