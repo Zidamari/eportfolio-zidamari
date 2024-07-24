@@ -6,6 +6,7 @@ import { OrbitControls } from '@react-three/drei';
 import { PointLight } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Mesh } from 'three';
+import { AmbientLight } from 'three';
 
 type Props = {
   slug: string;
