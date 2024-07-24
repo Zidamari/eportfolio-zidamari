@@ -37,16 +37,16 @@ export default async function PostPage({ params }: Props) {
     (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
 
   return (
-    <div className="min-h-screen">
+    <div className="bg-zinc-50 min-h-screen">
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
 
       <div className="flex flex-col items-center justify-center mx-auto space-y-4 max-w-7xl">
         <div className="flex flex-row w-full space-x-4">
-          <div className="w-1/3 p-4">
+          <div className="w-1/3">
             <SEP2Model className="w-full h-auto" />
           </div>
-          <div className="w-2/3 p-4">
+          <div className="w-2/3">
             <article className="prose prose-zinc prose-quoteless">
               <Mdx code={project.body.code} />
             </article>
