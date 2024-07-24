@@ -1,4 +1,3 @@
-// app/projects/SEP2Model.tsx
 "use client"; // Mark this file as a Client Component
 
 import React, { useEffect, useRef } from 'react';
@@ -6,7 +5,11 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import Threeasy from 'threeasy';
 
-const SEP2Model = () => {
+type SEP2ModelProps = {
+  className?: string;
+};
+
+const SEP2Model: React.FC<SEP2ModelProps> = ({ className }) => {
   const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -53,7 +56,7 @@ const SEP2Model = () => {
     };
   }, []);
 
-  return <div ref={canvasRef} style={{ width: '100%', height: '500px' }} />;
+  return <div ref={canvasRef} className={className} style={{ width: '100%', height: '500px' }} />;
 };
 
 export default SEP2Model;
