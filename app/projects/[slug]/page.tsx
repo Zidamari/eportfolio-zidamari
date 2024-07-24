@@ -4,7 +4,7 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
-import ClientComponent from "./ClientComponent"; // Import the ClientComponent
+import ClientComponent from "@/app/projects/[slug]/ClientComponent"; // Import ClientComponent
 
 export const revalidate = 60;
 
@@ -39,7 +39,9 @@ export default async function PostPage({ params }: Props) {
     <div className="bg-zinc-50 min-h-screen">
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
-      <ClientComponent slug={slug} project={project} views={views} /> {/* Use ClientComponent */}
+
+      {/* Use ClientComponent to render the model and article */}
+      <ClientComponent slug={slug} project={project} views={views} />
     </div>
   );
 }

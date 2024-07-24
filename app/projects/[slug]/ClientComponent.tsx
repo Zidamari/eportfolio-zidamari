@@ -26,12 +26,14 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen bg-white overflow-hidden">
-      <div className="flex flex-row items-start justify-between p-8">
-        <div className="w-1/3 h-96 sticky top-8 bg-white p-8 rounded-lg shadow-lg">
-          <SEP2Model className="w-full h-full" />
+    <div className="bg-zinc-50 min-h-screen">
+      <div className="flex flex-row items-start justify-between px-4 py-12 mx-auto max-w-7xl">
+        <div className="w-1/3 sticky top-8">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <SEP2Model className="w-full h-96" />
+          </div>
         </div>
-        <div className="w-2/3 bg-white p-8 rounded-lg shadow-lg ml-8">
+        <div className="w-2/3 ml-8">
           <article className="prose prose-zinc prose-quoteless">
             <Mdx code={project.body.code} />
           </article>
