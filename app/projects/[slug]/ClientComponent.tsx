@@ -30,10 +30,10 @@ const ClientComponent = ({ slug, project, views }: Props) => {
     <div className="relative w-screen h-screen overflow-hidden">
       <SEP2ModelWrapper className="model-background" />
       <div
-        className="absolute inset-0 flex items-center justify-center"
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
         style={{ transform: `translateY(${scrollY}px)` }}
       >
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+        <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto pointer-events-auto ml-auto mr-8">
           <ReportView slug={slug} />
           <article className="prose prose-zinc prose-quoteless">
             <Mdx code={project.body.code} />

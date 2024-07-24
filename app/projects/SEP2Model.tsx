@@ -27,6 +27,9 @@ const SEP2Model: React.FC<SEP2ModelProps> = ({ className }) => {
         model.scale.set(0.4, 0.4, 0.4);
         model.rotation.set(1, 0.4, 0);
 
+        // Position the model to the left
+        model.position.set(-2, 0, 0);
+
         app.scene.add(model);
 
         const onScroll = () => {
