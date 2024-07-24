@@ -42,10 +42,10 @@ export default async function PostPage({ params }: Props) {
       <ReportView slug={project.slug} />
 
       <div className="flex flex-col items-center justify-center mx-auto space-y-4 max-w-7xl">
-        <div className="w-full p-4">
+        <div className="w-full">
           <SEP2Model className="w-full h-full" />
         </div>
-        <div className="w-full p-4">
+        <div className="w-full">
           <article className="prose prose-zinc prose-quoteless">
             <Mdx code={project.body.code} />
           </article>
