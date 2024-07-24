@@ -6,7 +6,7 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
-import SEP2ModelWrapper from "/app/projects/SEP2ModelWrapper.tsx";
+import SEP2ModelWrapper from "@/app/projects/SEP2ModelWrapper";
 
 export const revalidate = 60;
 
