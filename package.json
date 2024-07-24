@@ -26,8 +26,8 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "3.0.1",
     "typescript": "^5.2.2",
-    "three": "^0.152.2", // Added dependency
-    "threeasy": "^1.0.0" // Added dependency
+    "three": "^0.152.2",
+    "threeasy": "^1.0.0" 
   },
   "devDependencies": {
     "@opentelemetry/api": "1.6.0",
