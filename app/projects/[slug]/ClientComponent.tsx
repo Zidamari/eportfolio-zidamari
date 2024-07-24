@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import SEP2ModelWrapper from "@/app/projects/SEP2ModelWrapper";
 import { ReportView } from "./view";
+import { Mdx } from "@/app/components/mdx";
 
 type Props = {
   slug: string;
