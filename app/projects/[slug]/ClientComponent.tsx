@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import SEP2Model from "@/app/projects/SEP2Model";
-import { Mdx } from "@/app/components/mdx"; // Import the Mdx component
+import { Mdx } from "@/app/components/mdx";
+import { Article } from "@/app/projects/article"; // Import the Article component
 
 type Props = {
   slug: string;
@@ -32,9 +33,7 @@ const ClientComponent = ({ slug, project, views }: Props) => {
           <SEP2Model className="w-full h-full" />
         </div>
         <div className="w-2/3 bg-white rounded-lg shadow-lg ml-8">
-          <article className="prose prose-zinc prose-quoteless">
-            <Mdx code={project.body.code} />
-          </article>
+          <Article project={project} views={views} />
         </div>
       </div>
     </div>
