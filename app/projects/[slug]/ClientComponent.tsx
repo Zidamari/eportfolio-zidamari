@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import SEP2ModelWrapper from "@/app/projects/SEP2ModelWrapper";
-import { ReportView } from "./view";
 import { Mdx } from "@/app/components/mdx"; // Import the Mdx component
 
 type Props = {
@@ -34,7 +33,6 @@ const ClientComponent = ({ slug, project, views }: Props) => {
         style={{ transform: `translateY(${scrollY}px)` }}
       >
         <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto pointer-events-auto ml-auto mr-8">
-          <ReportView slug={slug} />
           <article className="prose prose-zinc prose-quoteless">
             <Mdx code={project.body.code} />
           </article>
