@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import SEP2ModelWrapper from "@/app/projects/SEP2ModelWrapper";
 import { ReportView } from "./view";
 import { Mdx } from "@/app/components/mdx"; // Import the Mdx component
@@ -12,19 +12,11 @@ type Props = {
 };
 
 const ClientComponent = ({ slug, project, views }: Props) => {
+  const [scrollY, setScrollY] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
-      const model = document.getElementById("model");
-      const content = document.getElementById("content");
-      const scrollPosition = window.scrollY;
-
-      if (model) {
-        model.style.transform = `rotateY(${scrollPosition}deg)`;
-      }
-
-      if (content) {
-        content.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-      }
+      setScrollY(window.scrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,7 +29,10 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   return (
     <div className="relative w-screen h-screen overflow-hidden">
       <SEP2ModelWrapper className="model-background" />
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div
+        className="absolute inset-0 flex items-center justify-center"
+        style={{ transform: `translateY(${scrollY}px)` }}
+      >
         <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
           <ReportView slug={slug} />
           <article className="prose prose-zinc prose-quoteless">
