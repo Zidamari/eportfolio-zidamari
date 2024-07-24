@@ -11,8 +11,11 @@
   "dependencies": {
     "@next/font": "^13.5.4",
     "@next/mdx": "^13.5.4",
+    "@react-three/drei": "^9.109.2",
+    "@react-three/fiber": "^8.16.8",
     "@upstash/redis": "^1.23.3",
     "contentlayer": "^0.3.4",
+    "eact": "0.0.1-security",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.284.0",
     "markdown-wasm": "^1.2.0",
