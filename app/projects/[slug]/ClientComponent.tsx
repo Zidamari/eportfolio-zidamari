@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SEP2ModelWrapper from "@/app/projects/SEP2ModelWrapper";
+import SEP2Model from "@/app/projects/SEP2Model";
 import { Mdx } from "@/app/components/mdx"; // Import the Mdx component
 
 type Props = {
@@ -26,13 +26,12 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
-      <SEP2ModelWrapper className="model-background" />
-      <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
-        style={{ transform: `translateY(${scrollY}px)` }}
-      >
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto pointer-events-auto ml-auto mr-8">
+    <div className="relative w-screen h-screen bg-white overflow-hidden">
+      <div className="flex flex-row items-start justify-between p-8">
+        <div className="w-1/3 h-96">
+          <SEP2Model className="model-background" />
+        </div>
+        <div className="w-2/3 bg-white p-8 rounded-lg shadow-lg">
           <article className="prose prose-zinc prose-quoteless">
             <Mdx code={project.body.code} />
           </article>

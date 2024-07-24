@@ -27,9 +27,6 @@ const SEP2Model: React.FC<SEP2ModelProps> = ({ className }) => {
         model.scale.set(0.4, 0.4, 0.4);
         model.rotation.set(1, 0.4, 0);
 
-        // Position the model to the left
-        model.position.set(-2, 0, 0);
-
         app.scene.add(model);
 
         const onScroll = () => {
@@ -59,7 +56,7 @@ const SEP2Model: React.FC<SEP2ModelProps> = ({ className }) => {
     };
   }, []);
 
-  return <div ref={canvasRef} className={`absolute inset-0 ${className}`} style={{ width: '100%', height: '100%' }} />;
+  return <div ref={canvasRef} className={`w-full h-full ${className}`} />;
 };
 
 export default SEP2Model;
