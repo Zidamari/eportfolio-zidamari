@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { PointLight, AmbientLight } from 'three';
+import { PointLight } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Mesh } from 'three';
 
@@ -26,6 +26,10 @@ function SEP2Model() {
   );
 }
 
+const AmbientLightComponent = () => {
+  return <primitive object={new AmbientLight()} />;
+};
+
 const ClientComponent = ({ slug, project, views }: Props) => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -47,7 +51,7 @@ const ClientComponent = ({ slug, project, views }: Props) => {
           style={{ marginLeft: '20px', marginTop: '20px' }}
         >
           <Canvas>
-            <AmbientLight />
+            <AmbientLightComponent />
             <PointLight position={[10, 10, 10]} />
             <OrbitControls />
             <SEP2Model scale={0.5} />
