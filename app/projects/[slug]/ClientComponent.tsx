@@ -39,27 +39,27 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   return (
     <div className="relative w-screen min-h-screen bg-white overflow-hidden">
       <div className="flex flex-col items-center justify-start p-8 space-y-8">
-        <div className="w-full bg-white p-8 rounded-lg shadow-lg">
-          <article className="prose prose-zinc prose-quoteless">
+        <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-lg">
+          <article className="prose prose-zinc prose-quoteless mx-auto">
             <Mdx code={project.body.code} />
           </article>
         </div>
-        <div className="w-full bg-white p-8 rounded-lg shadow-lg">
+        <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-lg">
           <SEP2Model className="w-full h-96" />
           <div className="text-center mt-2">
             <p className="text-lg font-semibold">EVEBOT PrintPen Model</p>
           </div>
         </div>
-        <div className="w-full bg-white p-8 rounded-lg shadow-lg">
+        <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-lg">
           <Slider {...sliderSettings}>
             <div>
-              <img src="/images/Sketch1.jpeg" alt="Image 1" />
+              <img src="/path/to/image1.jpg" alt="Image 1" />
             </div>
             <div>
-              <img src="/images/Sketch2.jpeg" alt="Image 2" />
+              <img src="/path/to/image2.jpg" alt="Image 2" />
             </div>
             <div>
-              <img src="/images/Sketch3.jpeg" alt="Image 3" />
+              <img src="/path/to/image3.jpg" alt="Image 3" />
             </div>
           </Slider>
         </div>
