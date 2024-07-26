@@ -26,7 +26,7 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen bg-white overflow-hidden">
+    <div className="relative w-screen min-h-screen bg-white overflow-hidden">
       <div className="flex flex-col items-start justify-between p-8">
         <div className="w-full bg-white p-8 rounded-lg shadow-lg mb-8">
           <article className="prose prose-zinc prose-quoteless">
