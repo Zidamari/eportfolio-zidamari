@@ -64,12 +64,15 @@ const ClientComponent = ({ slug, project, views }: Props) => {
           <Slider {...sliderSettings}>
             <div>
               <img src="/images/cad1.png" alt="CAD Assembly of System" />
+              <p className="text-center mt-2">CAD Assembly of System</p>
             </div>
             <div>
               <img src="/images/output1.jpg" alt="Example of Item/Product Output" />
+              <p className="text-center mt-2">Example of Item/Product Output</p>
             </div>
             <div>
               <img src="/images/team1.jpg" alt="The Project Team" />
+              <p className="text-center mt-2">The Project Team</p>
             </div>
           </Slider>
         </div>
