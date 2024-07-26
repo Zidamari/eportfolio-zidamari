@@ -27,17 +27,14 @@ const ClientComponent = ({ slug, project, views }: Props) => {
 
   return (
     <div className="relative w-screen h-screen bg-white overflow-hidden">
-      <div className="flex flex-row items-start justify-between p-8 h-full">
-        <div className="w-1/3 h-full sticky top-8 bg-white p-8 rounded-lg shadow-lg">
-          <SEP2Model className="w-full h-full" />
-          <div className="text-center mt-2">
-            <p className="text-lg font-semibold">EVEBOT PrintPen Model</p>
-          </div>
-        </div>
-        <div className="w-2/3 h-full bg-white p-8 rounded-lg shadow-lg ml-8 overflow-auto">
+      <div className="flex flex-col items-start justify-between p-8">
+        <div className="w-full bg-white p-8 rounded-lg shadow-lg mb-8">
           <article className="prose prose-zinc prose-quoteless">
             <Mdx code={project.body.code} />
           </article>
+        </div>
+        <div className="w-full h-96 bg-white p-8 rounded-lg shadow-lg">
+          <SEP2Model className="w-full h-full" />
         </div>
       </div>
     </div>
