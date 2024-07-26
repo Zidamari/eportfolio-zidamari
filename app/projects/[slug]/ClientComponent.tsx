@@ -6,6 +6,8 @@ import { Mdx } from "@/app/components/mdx"; // Import the Mdx component
 import Slider from "react-slick"; // Import the Slider component
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
+import { Download } from "lucide-react";
 
 type Props = {
   slug: string;
@@ -36,6 +38,14 @@ const ClientComponent = ({ slug, project, views }: Props) => {
     slidesToScroll: 1,
   };
 
+  const downloads = [
+    { label: "File 1 (PDF)", href: "/downloads/file1.pdf" },
+    { label: "File 2 (DOCX)", href: "/downloads/file2.docx" },
+    { label: "File 3 (JPG)", href: "/downloads/file3.jpg" },
+    { label: "File 4 (MP4)", href: "/downloads/file4.mp4" },
+    { label: "File 5 (ZIP)", href: "/downloads/file5.zip" },
+  ];
+
   return (
     <div className="relative w-screen min-h-screen bg-white overflow-hidden">
       <div className="flex flex-col items-center justify-start p-8 space-y-8">
@@ -62,6 +72,17 @@ const ClientComponent = ({ slug, project, views }: Props) => {
               <img src="/path/to/image3.jpg" alt="Image 3" />
             </div>
           </Slider>
+        </div>
+        <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-lg">
+          <h2 className="text-xl font-semibold mb-4">Downloadable Files</h2>
+          <div className="flex flex-col space-y-4">
+            {downloads.map((file) => (
+              <Link key={file.label} href={file.href} className="flex items-center space-x-2 text-blue-600 hover:underline">
+                <Download size={20} />
+                <span>{file.label}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>
