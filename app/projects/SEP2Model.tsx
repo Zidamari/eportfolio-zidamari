@@ -25,7 +25,8 @@ const SEP2Model: React.FC<SEP2ModelProps> = ({ className }) => {
       (gltf) => {
         const model = gltf.scene;
         // Increase the scale of the model
-        model.scale.multiplyScalar(1000); // or model.scale.set(1000, 1000, 1000);
+        //model.scale.multiplyScalar(1000); // or model.scale.set(1000, 1000, 1000);
+        model.scale.set(1000, 1000, 1000);
         model.rotation.set(1, 0.4, 0);
 
         app.scene.add(model);
