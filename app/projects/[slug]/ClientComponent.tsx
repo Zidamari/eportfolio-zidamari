@@ -39,11 +39,11 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   };
 
   const downloads = [
-    { label: "File 1 (PDF)", href: "/downloads/file1.pdf" },
-    { label: "File 2 (DOCX)", href: "/downloads/file2.docx" },
-    { label: "File 3 (JPG)", href: "/downloads/file3.jpg" },
-    { label: "File 4 (MP4)", href: "/downloads/file4.mp4" },
-    { label: "File 5 (ZIP)", href: "/downloads/file5.zip" },
+    { label: "Portfolio Report", href: "/downloads/file1.pdf" },
+    //{ label: "File 2 (DOCX)", href: "/downloads/file2.docx" },
+    //{ label: "File 3 (JPG)", href: "/downloads/file3.jpg" },
+    //{ label: "File 4 (MP4)", href: "/downloads/file4.mp4" },
+    //{ label: "File 5 (ZIP)", href: "/downloads/file5.zip" },
   ];
 
   return (
