@@ -39,7 +39,7 @@ const ClientComponent = ({ slug, project, views }: Props) => {
   };
 
   const downloads = [
-    { label: "Portfolio Report", href: "/downloads/file1.pdf" },
+    { label: "Portfolio Report", href: "/downloads/SEP2 Portfolio Report.pdf" },
     //{ label: "File 2 (DOCX)", href: "/downloads/file2.docx" },
     //{ label: "File 3 (JPG)", href: "/downloads/file3.jpg" },
     //{ label: "File 4 (MP4)", href: "/downloads/file4.mp4" },
@@ -63,13 +63,13 @@ const ClientComponent = ({ slug, project, views }: Props) => {
         <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-lg">
           <Slider {...sliderSettings}>
             <div>
-              <img src="/path/to/image1.jpg" alt="Image 1" />
+              <img src="/images/cad1.png" alt="CAD Assembly of System" />
             </div>
             <div>
-              <img src="/path/to/image2.jpg" alt="Image 2" />
+              <img src="/images/output1.jpg" alt="Example of Item/Product Output" />
             </div>
             <div>
-              <img src="/path/to/image3.jpg" alt="Image 3" />
+              <img src="/images/team1.jpg" alt="The Project Team" />
             </div>
           </Slider>
         </div>
