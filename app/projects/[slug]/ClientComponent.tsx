@@ -34,6 +34,9 @@ const ClientComponent = ({ slug, project, views }: Props) => {
       </div>
       <div className="w-full max-w-4xl h-96 bg-white p-8 rounded-lg shadow-lg">
         <SEP2Model className="w-full h-full" />
+        <div className="text-center mt-2"> {/* Adjusted margin */}
+          <p className="text-lg font-semibold">EVEBOT PrintPen</p>
+        </div>
       </div>
     </div>
   );
