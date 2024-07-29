@@ -67,6 +67,10 @@ const ClientComponent = ({ slug, project, views }: Props) => {
               <p className="text-center mt-2">CAD Assembly of System</p>
             </div>
             <div>
+              <img src="/images/electric.png" alt="Electrical Schematics" />
+              <p className="text-center mt-2">Electrical Schematics</p>
+            </div>
+            <div>
               <img src="/images/output1.jpg" alt="Example of Item/Product Output" />
               <p className="text-center mt-2">Example of Item/Product Output</p>
             </div>
